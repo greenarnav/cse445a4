@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Hotel> <!-- Error 1: Incorrect root element -->
+  <Hotel Rating="4.2">
+    <!-- Error 5: Two Name elements -->
+    <Name>Westin</Name>
+    <Name>ExtraName</Name>
+    <Phone>480-968-8885</Phone>
+    <Phone>800-937-8461</Phone>
+    <Address NearestAirport="Sky Harbor">
+      <Number>11</Number>
+      <Street>E 7th St</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85281</Zip>
+    </Address>
+  </Hotel>
+  <Hotel Rating="3.9">
+    <Name>Marriott</Name>
+    <!-- Error 3: Missing Phone element -->
+    <Address NearestAirport="Phoenix">
+      <Number>101</Number>
+      <Street>Main St</Street>
+      <City>Phoenix</City>
+      <State>AZ</State>
+      <Zip>85001</Zip>
+    </Address>
+  </Hotel>
+  <Hotel>
+    <Name>Hyatt Regency</Name>
+    <Phone>480-555-6789</Phone>
+    <Phone>480-555-9876</Phone>
+    <!-- Error 2: Missing required attribute NearestAirport -->
+    <!-- Error 4: Missing closing tag for Address -->
+    <Address>
+      <Number>202</Number>
+      <Street>Broadway</Street>
+      <City>Scottsdale</City>
+      <State>AZ</State>
+      <Zip>85251</Zip>
+    <!-- Intentionally no </Address> here -->
+  </Hotel>
+  <Hotel Rating="4.5">
+    <Name>Hilton</Name>
+    <Phone>480-555-1111</Phone>
+    <Address NearestAirport="Phoenix Sky">
+      <Number>303</Number>
+      <Street>Desert Rd</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85281</Zip>
+    </Address>
+  </Hotel>
+</Hotel>
